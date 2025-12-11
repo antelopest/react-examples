@@ -1,39 +1,26 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export const TogglePage = () => {
   const [visible, setVisible] = useState<boolean>(false);
+  const [disabled, setDisabled] = useState<boolean>(false);
 
-  const show = () => {
-    setVisible(true);
-  }
+  const toggle = useCallback(() => {
+    if (disabled) return;
 
-  const hide = () => {
-    setVisible(false);
-  }
+    setDisabled(true);
+    setVisible(prev => !prev);
 
-
-
-  if (!visible) {
-    return (
-      <>
-        <h3>Toggle</h3>
-
-        <button onClick={show} type="button">Show Address</button>
-      </>
-    )
-  }
+    setTimeout(() => setDisabled(false), 500);
+  }, [disabled]);
 
   return (
     <>
       <h3>Toggle</h3>
 
-      {!visible && (
-        <button onClick={show} type="button">Show</button>
-      )}
+      <button disabled={disabled} onClick={toggle} type="button">{visible ? "Hide" : "Show"}</button>
 
       {visible && (
         <>
-          <button onClick={hide} type="button">Hide</button>
           <div>
             <h3> Address</h3>
             <p>Thailand, Phuket, Chalong</p>

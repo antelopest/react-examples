@@ -7,6 +7,7 @@ import { UserPage } from "@/pages/user";
 import { TimerPage } from "@/pages/timer";
 import { WindowPage } from "@/pages/window";
 import { TogglePage } from "@/pages/toggle";
+import { ProductsPage } from "@/pages/products";
 
 const routes: RouteObject[] = [
   {
@@ -42,6 +43,13 @@ const routes: RouteObject[] = [
     element:
       (<MainLayout>
         <TogglePage />
+      </MainLayout>)
+  },
+  {
+    path: "/products",
+    element:
+      (<MainLayout>
+        <ProductsPage />
       </MainLayout>)
   },
   {

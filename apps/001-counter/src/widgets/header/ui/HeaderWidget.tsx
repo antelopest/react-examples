@@ -12,6 +12,7 @@ export const HeaderWidget = () => {
             <li><NavLink to="/user">User</NavLink></li>
             <li><NavLink to="/window">Window</NavLink></li>
             <li><NavLink to="/toggle">Toggle</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
           </ul>
         </nav>
       </header>
