@@ -17,9 +17,9 @@ export const CounterPage = () => {
 
   return (
     <>
-      <h3>App</h3>
+      <h3>Counter</h3>
 
-      <p>Counter: {count}</p>
+      <p>Value: {count}</p>
 
       <button type="button" onClick={increment}>Increment</button>
       <button type="button" onClick={decrement} disabled={count <= 0}>Decrement</button>

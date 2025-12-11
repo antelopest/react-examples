@@ -1,0 +1,1 @@
+export { WindowPage } from "./ui/WindowPage";

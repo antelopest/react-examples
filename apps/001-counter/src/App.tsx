@@ -1,14 +1,8 @@
-import { MainLayout } from "./app/Layout/main/ui/MainLayout"
-import { CounterPage } from "./pages/counter"
+import { RouterProvider } from "react-router-dom";
+import { router } from "@app/providers/routers";
 
-const App = () => {
-  return (
-    <>
-      <MainLayout>
-        <CounterPage />
-      </MainLayout>
-    </>
-  );
-}
+const App = () => (
+  <RouterProvider router={router} />
+);
 
 export default App;
